@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    label {
+        @apply text-2xl;
+    }
+    label, header p {
+        @apply text-gray-600;
+    }
+    input, textarea, select {
+        @apply bg-black;
+        @apply rounded;
+        @apply hover:bg-gray-700;
+        @apply p-4;
+        @apply text-white;
+        @apply my-4;
+    }
+}
+
+body {
+    background: #1b2c1f;
+}
+

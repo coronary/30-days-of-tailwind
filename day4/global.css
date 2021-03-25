@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    option, select {
+        @apply font-bold;
+        @apply uppercase;
+        @apply text-lg;
+    }
+}
+
+body {
+    background: #6c3a45;
+}

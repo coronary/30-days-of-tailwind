@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+         }
+    img {
+        @apply w-9/12;
+        @apply transform;
+        @apply hover:scale-110;
+        @apply my-3;
+    }
+}
+

@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+         }
+    .item {
+        @apply border-2;
+        @apply border-solid;
+        @apply border-black;
+        @apply w-full;
+        @apply md:w-1/2;
+        @apply lg:w-1/3;
+        @apply font-bold;
+        @apply text-xl;
+        @apply flex; 
+        @apply items-center; 
+        @apply justify-center; 
+    }
+}
+
