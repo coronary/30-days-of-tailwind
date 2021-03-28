@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        box-sizing: border-box;
+         }
+    .heading {
+        @apply text-7xl;
+        @apply lg:text-6xl;
+        @apply font-bold;
+        @apply bg-first;
+        @apply py-6;
+        @apply text-center;
+    }
+    .card {
+        @apply rounded;
+        @apply m-2;
+        @apply p-4;
+        @apply bg-gray-100;
+        @apply flex;
+        @apply flex-col;
+    }
+    .card *{
+        @apply text-2xl;
+    }
+    .card p:first-of-type {
+        @apply text-5xl;
+    }
+    .tasks {
+        @apply flex;
+        @apply flex-col;
+    }
+    .butt {
+        @apply bg-third;
+        @apply text-center;
+        @apply py-4;
+        @apply mt-2;
+        @apply font-bold;
+        @apply uppercase;
+        @apply hover:bg-second;
+    }
+    .line {
+        @apply border-2;
+        @apply border-solid;
+        @apply border-gray-400;
+        @apply mt-2;
+    }
+}
