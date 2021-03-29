@@ -8,18 +8,17 @@
 </head>
 <body class="h-screen flex">
     <section class="flex flex-col sidebar bg-gray-100 shadow-lg lg:w-14 w-32 items-center py-3 overscroll-x-auto">
-        <div class="scroll-holder w-full items-center overflow-x-auto ">
+        <div class="scroll-holder items-center overflow-hidden">
             <span class="g1 flex flex-col items-center">
                 <img class="" src="svg/bat-halloween-scary-fly-mammal-animal-31444.svg" alt="">
                 <img class="" src="svg/candle-halloween-light-darkness-wax-holder-31438.svg" alt="">
                 <img class="" src="svg/ghost-evil-halloween-spirit-fear-31440.svg" alt="">
             </span>
-            <span class="g2 flex flex-col items-center hidden">
+            <span class="g2 flex flex-col items-center slide-out">
                 <img class="" src="svg/cobweb-spider-net-spiderweb-trap-silk-31445.svg" alt="">
                 <img class="" src="svg/zombie-bone-halloween-tissue-organ-hand-31447.svg" alt="">
                 <img class="" src="svg/pumpkin-halloween-spooky-scary-31446.svg" alt="">
             </span>
-            <button class="swap m-auto">swap</button> 
         </div>
         <div class="flex-1 invis"></div>
         <img id="hat" class="w-9/12" src="svg/hat-halloween-witch-wizard-magic-31442.svg" alt="">
@@ -27,16 +26,35 @@
 </body>
 <script>
     const groups = document.querySelectorAll('.scroll-holder span')
-    const butt = document.querySelector('button')
-    document.querySelector('.g1').style['display'] = 'flex'
-    butt.addEventListener('click', swap)
+    const sidebar = document.querySelector('.sidebar')
+    document.querySelector('.g1').classList.add('slide-in')
+    sidebar.addEventListener('wheel', swap)
     function swap(e) {
         groups.forEach(group => {
-            console.log(group.style['display'] == '');
-            if(group.style['display'] == 'flex') group.style['display'] = 'none'
-            else group.style['display'] = 'flex'
+            if(group.classList.contains('slide-in')) {
+                group.classList.remove('slide-in')
+                group.classList.add('slide-out')
+            }
+            else {
+                group.classList.remove('slide-out')
+                group.classList.add('slide-in')
+                //group.style['display'] = 'flex'
+            }
     })
 }
 
 </script>
+<style>
+    .scroll-holder > *  {
+        transition: all 2s ease-in;
+    }
+    .slide-in {
+        transform: translateX(0px);
+        display: flex;
+    }
+    .slide-out {
+        transform: translateX(20px);
+        display: none;
+    }
+</style>
 </html>
