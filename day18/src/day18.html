@@ -16,7 +16,7 @@
         ]
      }">
         <button class='focus:outline-none rounded p-5 bg-gin-light text-7xl hover:bg-gin-dark' @click="open = true">dropdown</button>
-        <div x-show='open' @click.away='open = false' class="options bg-red-100 rounded p-4 text-5xl bg-gin">
+        <div x-show='open' @click.away='open = false' class="options rounded p-4 text-5xl bg-gin">
             <template x-for='item in items' >
                 <p x-text='item' x-bind:value="item" class="p-5 hover:bg-gin-dark"></p>
             </template>
