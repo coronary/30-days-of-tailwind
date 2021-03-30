@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day 18 with vue</title>
+    <link rel="stylesheet" href="local.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body class="p-4 font-mono">
+     <div class="lg:w-1/2 dropdown-holder flex flex-col items-stretch text-poppy" id="holder">
+        <button class='focus:outline-none rounded p-5 bg-gin-light text-7xl hover:bg-gin-dark'
+            v-on:click="open = !open">dropdown</button>
+        <div v-if="open" class="options rounded p-4 text-5xl bg-gin">
+            <p v-for="item in items" class="p-5 hover:bg-gin-dark">{{item}}</p>
+        </div>
+
+     </div>
+        <script src="local.js"></script>
+</body>
+</html>
