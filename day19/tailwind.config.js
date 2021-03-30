@@ -4,20 +4,20 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    // colors: {
-    //   black: colors.black,
-    //   gray: colors.gray,
-    //   gin: {
-    //     light: '#F0FFF6',
-    //     DEFAULT: '#dbe9e1',
-    //     dark: '#B7C3BC'
-    //   },
-    //   poppy: {
-    //     light: '#942020',
-    //     DEFAULT: '#ba2828',
-    //     dark: '#942020'
-    //   }
-    // },
+    colors: {
+      black: colors.black,
+      gray: colors.gray,
+      pine: {
+        light: '#F4FFCA',
+        DEFAULT: '#C4CF9A',
+        dark: '#BAC590'
+      },
+      paradiso: {
+        light: '#5CB3AB',
+        DEFAULT: '#388F87',
+        dark: '#1A7169'
+      }
+    },
     extend: { },
   },
   variants: {
