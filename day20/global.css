@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .album {
+        @apply w-24;
+        @apply h-24;
+        @apply bg-black;
+    }
+     .bigger {
+         @apply transition;
+         @apply transform;
+         @apply duration-500;
+         @apply hover:scale-110;
+     }
+}
+.album {
+    margin-bottom: 10px;
+}
+.sidebar {
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+}
+.sidebar-out {
+    transform: translateX(calc(20px - calc(100%)));
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 20</title>
+    <link rel="stylesheet" href="local.css">
+</head>
+<body class='flex'>
+   <section class="p-2 flex flex-col justify-start items-start absolute left-0 w-1/2 md:w-1/4  shadow sidebar bg-gray-300 h-screen">
+        <span class="big3 mb-2 text-5xl md:text-6xl">
+            <p class="bigger">Home</p>
+            <p class="bigger">Browse</p>
+            <p class="bigger">Radio</p>
+        </span>
+        <p class="text-3xl md:text-4xl">Your Library</p>
+        <ul class="text-2xl md:text-3xl px-3">
+            <li>playlist 1</li>
+            <li>playlist 2</li>
+            <li>playlist 3</li>
+            <li>playlist 4</li>
+        </ul>
+    </section>
+   <main class="flex-1 pl-8 py-3">
+        <section class="recent">
+            <p class="text-xl mb-2">Recently Played</p>
+            <span class="flex flex-wrap justify-around content-around albums">
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+                <div class="album"></div>
+            </span>
+
+        </section>
+   </main>
+
+   <footer class="hidden">
+       <a href="https://iconscout.com/icon-pack/feather-version-1-1" target="_blank">Feather Version 1.1 Icon Pack</a> by <a href="https://iconscout.com/contributors/feathericons" target="_blank">Feather Icons</a>
+   </footer>
+   <script>
+       const sidebar = document.querySelector('.sidebar')
+       sidebar.addEventListener('click', (e) => {
+           if(sidebar.classList.contains('sidebar-out')) sidebar.classList.remove('sidebar-out')
+           else sidebar.classList.add('sidebar-out')
+       })
+   </script>
+</body>
+</html>
