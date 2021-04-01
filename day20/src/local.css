@@ -546,6 +546,18 @@ video {
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
 }
 
+@media (min-width: 1024px) {
+  .album {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .album {
+    width: 12rem;
+  }
+}
+
 .bigger {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="local.css">
 </head>
 <body class='flex'>
-   <section class="p-2 flex flex-col justify-start items-start absolute left-0 w-1/2 md:w-1/4  shadow sidebar bg-gray-300 h-screen">
+   <section class="p-2 flex flex-col justify-start items-start z-10 absolute left-0 w-1/2 md:w-1/4  shadow sidebar bg-gray-300 h-screen">
         <span class="big3 mb-2 text-5xl md:text-6xl">
             <p class="bigger">Home</p>
             <p class="bigger">Browse</p>
@@ -15,12 +15,13 @@
         </span>
         <p class="text-3xl md:text-4xl">Your Library</p>
         <ul class="text-2xl md:text-3xl px-3">
-            <li>playlist 1</li>
-            <li>playlist 2</li>
-            <li>playlist 3</li>
-            <li>playlist 4</li>
+            <li class="bigger">playlist 1</li>
+            <li class="bigger">playlist 2</li>
+            <li class="bigger">playlist 3</li>
+            <li class="bigger">playlist 4</li>
         </ul>
     </section>
+    <span class="blocker absolute left-0 bg-black w-full h-screen bg-opacity-60 z-0"></span>
    <main class="flex-1 pl-8 py-3">
         <section class="recent">
             <p class="text-xl mb-2">Recently Played</p>
@@ -44,10 +45,20 @@
    </footer>
    <script>
        const sidebar = document.querySelector('.sidebar')
+       const blocker = document.querySelector('.blocker')
+       function sidebarout() {
+            sidebar.classList.remove('sidebar-out')
+            blocker.classList.remove('hidden')
+       }
+       function sidebarin() {
+            sidebar.classList.add('sidebar-out')
+            blocker.classList.add('hidden')
+       }
        sidebar.addEventListener('click', (e) => {
-           if(sidebar.classList.contains('sidebar-out')) sidebar.classList.remove('sidebar-out')
-           else sidebar.classList.add('sidebar-out')
+           if(sidebar.classList.contains('sidebar-out')) sidebarout()
+           else sidebarin() 
        })
+       blocker.addEventListener('click', () => sidebarin())
    </script>
 </body>
 </html>

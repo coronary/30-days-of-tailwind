@@ -7,11 +7,13 @@
         @apply w-24;
         @apply h-24;
         @apply bg-black;
+        @apply lg:h-48;
+        @apply lg:w-48;
     }
      .bigger {
          @apply transition;
          @apply transform;
-         @apply duration-500;
+         @apply duration-200;
          @apply hover:scale-110;
      }
 }
