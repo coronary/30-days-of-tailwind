@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 21</title>
+    <link rel="stylesheet" href="local.css">
+</head>
+<body class="flex flex-col overflow-y-hidden">
+    <header class="uppercase p-5 font-bold text-5xl">
+        <p>Company</p>
+    </header>
+    <main class="h-screen w-screen bg-disco">
+        <div class="invis h-1/5"></div>
+        <div class="content flex no-wrap overflow-x-scroll h-1/2 my-auto pr-7">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </main>
+    <footer></footer>
+    <style>
+        .content::-webkit-scrollbar {
+        width: 8px;               /* width of the entire scrollbar */
+}
+
+    .content::-webkit-scrollbar-track {
+        background:tomato;
+    }
+
+.content::-webkit-scrollbar-thumb {
+  background-color: black;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+        width: 8px;               /* width of the entire scrollbar */
+}
+    </style>
+    <script>
+        //const ex = document.querySelectorAll('.box')
+        //ex.forEach(el => el.style.width = `${window.innerWidth - 40}px`)
+    </script>
+</body>
+</html>

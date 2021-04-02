@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .box {
+        @apply flex-none;
+        @apply md:w-full;
+        @apply w-80;
+        @apply mx-5;
+        @apply bg-black;
+        @apply bg-spindle;
+        @apply hover:bg-spindle-dark;
+    }
+}
