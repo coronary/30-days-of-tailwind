@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+    .card {
+        @apply bg-pink-200;
+        @apply flex;
+        @apply flex-col;
+        @apply p-2;
+        @apply rounded;
+    }
+    img {
+        @apply rounded-full;
+        @apply bg-white;
+        @apply h-14;
+    }
+    .name {
+        @apply text-lg;
+        @apply font-bold;
+    }
+    .card > p {
+        margin-left: 1em;
+    }
+}
