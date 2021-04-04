@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    .index-holder > span {
+        @apply bg-red-200;
+        @apply h-56;
+        @apply w-56;
+        @apply flex;
+        @apply items-center;
+        @apply justify-center;
+        @apply m-2;
+        @apply hover:bg-red-400;
+        @apply uppercase;
+    }
+}
