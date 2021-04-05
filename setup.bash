@@ -3,7 +3,7 @@
 search="\&\& exit 1\""
 scripts="$search,\n\"build:css\": \"npx postcss global.css -o .\/src\/local.css\",\n\"start\": \"npx browser-sync src\/ -w\""
 postcss="module.exports={\n\tplugins: [\n\t\trequire('tailwindcss')\n\t]\n}"
-tailwind="@tailwind base;\n@tailwind components;\n@tailwind utiltities"
+tailwind="@tailwind base;\n@tailwind components;\n@tailwind utilities;"
 
 echo -n "new folder name: "
 read folder
