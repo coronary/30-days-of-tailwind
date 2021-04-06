@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 25</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="local.css">
+</head>
+<body class="h-screen w-screen">
+    <header class="h-1/4 w-screen"></header>
+    <main class="p-7 flex flex-col md:flex-row justify-between text-center" id="app">
+        <div v-if="seen" class="alert  hover:bg-gray-300 transition duration-500 ease-in-out absolute top-4 left-6 p-3 pl-4 this is an alert bg-gray-200 rounded bg-opacity-70 flex content-center">
+            <p class="">{{ msg }}</p>
+            <button class="ml-2 transition duration-200 ease-in transform hover:scale-125">
+                <img src="icons/x-433952.svg" alt="" class="x " v-on:click="alertHide">
+            </button>
+        </div>
+        <div data-num="1" v-on:click="alertShow" class="flex-grow card rounded p-8 text-6xl shadow hover:bg-gray-100">
+            alert 1
+        </div>
+        <div data-num="2" v-on:click="alertShow" class="flex-grow card rounded p-8 text-6xl shadow hover:bg-gray-100">
+            alert 2
+        </div>
+        <div data-num="3" v-on:click="alertShow" class="flex-grow card rounded p-8 text-6xl shadow hover:bg-gray-100">
+            alert 3
+        </div>
+
+        <footer class="absolute bottom-0">
+            <a href="https://iconscout.com/icon-pack/feather" target="_blank">Feather Icon Pack</a> by <a href="https://iconscout.com/contributors/feathericons">Feather Icons</a> on <a href="https://iconscout.com">Iconscout</a>
+        </footer>
+    </main>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                seen: false,
+                msg: '',
+                alerts: [
+                    'sup guys this is alert 1',
+                    'sup guys this is alert 2',
+                    'sup guys this is alert 3',
+                ]
+            },
+            methods :{
+                alertShow: function (e) {
+                    this.seen = true
+                    this.msg = this.alerts[e.target.dataset.num - 1]
+                },
+                alertHide: function() {
+                    this.seen = false;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
