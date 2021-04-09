@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>day 28</title>
     <link rel="stylesheet" href="local.css">
+    <!-- <link href= "https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">  -->
 </head>
 <body class="w-screen h-screen flex flex-col justify-center items-center">
     
@@ -27,5 +28,30 @@
         <button class="mx-2 text-xl hover:text-green-400 bg-gray-200 p-1 rounded-l">prev</button>
         <button class="mx-2 text-xl hover:text-green-400 bg-gray-200 p-1 rounded-r">next</button>
     </span>
+    <div class="experiment group rounded-full w-1/2 border border-solid border-orange-600 p-4 mt-5">
+        <p class="circle  group-hover:text-red-200 transform group-hover:scale-150 transition duration-500 ease-in-out">fhl</p>
+    </div>
+    <style>
+        /* .circle {
+            transform: translateX(200px);
+        } */
+    </style>
+    <script>
+        const slide = document.querySelector('.experiment')
+        const circle = document.querySelector('.circle')
+
+        function handleMouseOn(e) {
+            console.log(this.offsetWidth);
+            circle.classList.add('sliding')
+        }
+
+        function handleMouseOff(e) {
+            console.log('off');
+            circle.classList.remove('sliding')
+        }
+        slide.addEventListener('mouseover', handleMouseOn)
+        slide.addEventListener('mouseout', handleMouseOff)
+    </script>
+    <!-- want to recreate slidey thing https://www.sorabloggingtips.com/2020/10/how-to-add-pagination-widget-in-blogger.html -->
 </body>
 </html>
